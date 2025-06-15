@@ -3,7 +3,7 @@ import { WorkoutDay } from '../types/workout';
 export const workoutData: WorkoutDay[] = [
   {
     name: "Push Day",
-    emoji: "💪",
+    emoji: "Monday",
     exercises: [
       { name: "Barbell Bench Press", sets: 4, reps: "8-10" },
       { name: "Incline Dumbbell Press", sets: 3, reps: "10-12" },
@@ -16,7 +16,7 @@ export const workoutData: WorkoutDay[] = [
   },
   {
     name: "Pull Day",
-    emoji: "🔙",
+    emoji: "Tuesday",
     exercises: [
       { name: "Deadlifts", sets: 4, reps: "6-8" },
       { name: "Pull-ups/Lat Pulldowns", sets: 4, reps: "8-12" },
@@ -30,7 +30,7 @@ export const workoutData: WorkoutDay[] = [
   },
   {
     name: "Legs Day",
-    // emoji: "🦵",s
+    emoji: "Wednesday",
     exercises: [
       { name: "Squats", sets: 4, reps: "8-10" },
       { name: "Romanian Deadlifts", sets: 4, reps: "10-12" },
@@ -43,7 +43,7 @@ export const workoutData: WorkoutDay[] = [
   },
   {
     name: "Upper Body",
-    emoji: "💯",
+    emoji: "Thrusday",
     exercises: [
       { name: "Incline Barbell Press", sets: 4, reps: "8-10" },
       { name: "T-Bar Rows", sets: 4, reps: "8-10" },
@@ -57,7 +57,7 @@ export const workoutData: WorkoutDay[] = [
   },
   {
     name: "Lower Body",
-    emoji: "🏋️",
+    emoji: "Friday",
     exercises: [
       { name: "Front Squats", sets: 4, reps: "8-10" },
       { name: "Stiff Leg Deadlifts", sets: 4, reps: "10-12" },
@@ -70,7 +70,7 @@ export const workoutData: WorkoutDay[] = [
   },
   {
     name: "Full Body",
-    emoji: "🔥",
+    emoji: "Saturday",
     exercises: [
       { name: "Compound Squats", sets: 3, reps: "10-12" },
       { name: "Push-ups", sets: 3, reps: "12-15" },
