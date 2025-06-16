@@ -4,7 +4,7 @@ import { WorkoutDay } from '../types/workout';
 export const workoutData: WorkoutDay[] = [
   {
     name: "Push Strength",
-    emoji: "💪", // Monday
+    emoji: "Monday",
     exercises: [
       { name: "Barbell Bench Press", sets: 4, reps: "4-6" },
       { name: "Incline Barbell or Dumbbell Press", sets: 3, reps: "6-8" },
@@ -19,7 +19,7 @@ export const workoutData: WorkoutDay[] = [
   },
   {
     name: "Pull Strength",
-    emoji: "🏋️", // Tuesday
+    emoji: "Tuesday",
     exercises: [
       { name: "Deadlift Variation (Conventional/Sumo/Trap-Bar)", sets: 4, reps: "4-6" },
       { name: "Barbell Row or Pendlay Row", sets: 3, reps: "5-7" },
@@ -32,7 +32,7 @@ export const workoutData: WorkoutDay[] = [
   },
   {
     name: "Legs",
-    emoji: "🦵", // Wednesday
+    emoji: "Wednesday",
     exercises: [
       { name: "Back Squat or Front Squat", sets: 4, reps: "5-8" },
       { name: "Romanian Deadlift or Hip Thrust", sets: 3, reps: "8-12" },
@@ -46,7 +46,7 @@ export const workoutData: WorkoutDay[] = [
   },
   {
     name: "Push Hypertrophy",
-    emoji: "🔥", // Thursday
+    emoji: "Thursday",
     exercises: [
     { name: "Chest Dips or Decline Dumbbell Press", sets: 3, reps: "8-12" },
     { name: "Low-Incline Dumbbell Press (15°-20°) or Machine Incline Press", sets: 3, reps: "10-12" },
@@ -64,7 +64,7 @@ export const workoutData: WorkoutDay[] = [
   },
   {
     name: "Pull Hypertrophy",
-    emoji: "💥", // Friday
+    emoji: "Friday", 
     exercises: [
       { name: "Chest-Supported Row or Cable Row", sets: 3, reps: "8-12" },
       { name: "Lat Pulldown or Pull-Up Variation", sets: 3, reps: "8-12" },
@@ -78,7 +78,7 @@ export const workoutData: WorkoutDay[] = [
   },
   {
     name: "Full Body (Optional / Recovery)",
-    emoji: "🌱", // Saturday
+    emoji: "Saturday",
     exercises: [
       { name: "Goblet Squat or Bodyweight Squat", sets: 2, reps: "10-12" },
       { name: "Push-Ups (bodyweight)", sets: 2, reps: "12-15" },
