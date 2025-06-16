@@ -8,7 +8,9 @@ interface StatsViewProps {
 }
 
 const StatsView: React.FC<StatsViewProps> = ({ stats, onBack }) => {
+  // console.log("statsssss: ", stats)
   const totalWorkouts = Object.values(stats).reduce((sum, day) => sum + (day.totalWorkouts || 0), 0);
+  // console.log("totalWorkouts: ", totalWorkouts)
   
   const getTopPRs = () => {
     const allPRs: Array<{ exercise: string, weight: number, day: string }> = [];
@@ -18,15 +20,17 @@ const StatsView: React.FC<StatsViewProps> = ({ stats, onBack }) => {
         allPRs.push({
           exercise: exerciseName,
           weight: exerciseStats.maxWeight,
+          reps: exerciseStats.lastReps,
           day: dayName
         });
       });
     });
     
-    return allPRs.sort((a, b) => b.weight - a.weight).slice(0, 5);
+    return allPRs.sort((a, b) => b.weight - a.weight).slice(0, 10);
   };
 
   const topPRs = getTopPRs();
+  // console.log("##########: ", topPRs)
 
   return (
     <div className="space-y-6">
@@ -49,7 +53,7 @@ const StatsView: React.FC<StatsViewProps> = ({ stats, onBack }) => {
       </div>
 
       {/* Overall Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="border border-green-500 rounded-lg p-4 text-center">
           <Calendar className="w-8 h-8 mx-auto mb-2 text-green-500" />
           <div className="text-2xl font-bold">{totalWorkouts}</div>
@@ -62,11 +66,11 @@ const StatsView: React.FC<StatsViewProps> = ({ stats, onBack }) => {
           <div className="text-sm opacity-80">Days Trained</div>
         </div>
         
-        <div className="border border-green-500 rounded-lg p-4 text-center">
-          <Weight className="w-8 h-8 mx-auto mb-2 text-green-500" />
-          <div className="text-2xl font-bold">{topPRs[0]?.weight || 0}kg</div>
-          <div className="text-sm opacity-80">Highest PR</div>
-        </div>
+        {/* <div className="border border-green-500 rounded-lg p-4 text-center"> */}
+        {/*   <Weight className="w-8 h-8 mx-auto mb-2 text-green-500" /> */}
+        {/*   <div className="text-2xl font-bold">{topPRs[0]?.weight || 0}kg</div> */}
+        {/*   <div className="text-sm opacity-80">Highest PR</div> */}
+        {/* </div> */}
       </div>
 
       {/* Top PRs */}
@@ -86,7 +90,7 @@ const StatsView: React.FC<StatsViewProps> = ({ stats, onBack }) => {
                     <div className="text-sm opacity-60">{pr.day}</div>
                   </div>
                 </div>
-                <div className="text-xl font-bold text-green-500">{pr.weight}kg</div>
+                <div className="text-xl font-bold text-green-500">{pr.weight}kg/{pr.reps}reps</div>
               </div>
             ))}
           </div>
